@@ -11,14 +11,26 @@
 
     <title>AI+ Club</title>
     <script src="/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/index.css" />
   </head>
 
   <body>
     <div class="container">
-      <div class="aiplus-title">
-      AI+ <div class="aiplus-placeholder"></div><div class="aiplus-cursor on"></div>
-      </div>
+      <div class="aiplus-header">
+        <div class="aiplus-title">
+        AI+ <div class="aiplus-placeholder"></div><div class="aiplus-cursor on"></div>
+        </div>
+        <div class="cta">
+          <form class="form" action="/create" method="post" class="cta_form align_middle" novalidate="">
+            <div class="form-group">
+              <label for=""></label>
+              <input class="email" name="email" type="email" spellcheck="false" id="inline_input" placeholder="Email address" class="input_email input_inline small_right_margin" data-email-healing="true"/> &nbsp;&nbsp;&nbsp;
+              <button type="submit" class="btn btn-primary">Sign Up</button>
+            </div>
+          </form>
+        </div>
+      </div> <!--aiplus-header-->
     </div> <!-- /container -->
     <div class="gradient"></div>
     <script src="/js/index.js"></script>

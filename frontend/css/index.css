@@ -1,10 +1,11 @@
 html, body {
     width: 100%;
     height: 100%;
-    min-height: 800px;
+    /*min-height: 800px;*/
     position: absolute;
     margin: 0;
-    background-image: url('/img/background.jpg')
+    background-image: url('/img/background.jpg');
+    background-size: 100%;
 }
 
 .gradient {
@@ -14,6 +15,7 @@ html, body {
     position: absolute;
     bottom: 0;
     left: 0px;
+    pointer-events: none;
 }
 
 .container {
@@ -24,11 +26,16 @@ html, body {
     background-image: cover;
 }
 
-.container .aiplus-title {
-    color: #fff;
+.container .aiplus-header {
     width: 80%;
+    height: 100%;
     position: absolute;
     top: 200px;
+    z-index: 3;
+}
+
+.container .aiplus-title {
+    color: #fff;
     text-align: center;
     font-size: 80px;
     font-weight: 900;
@@ -56,3 +63,37 @@ html, body {
     opacity: 0.0;
     transition: opacity 500ms;
 }
+
+.cta {
+    position: absolute;
+    text-align: center;
+    background: rgba(0,0,0,.65);
+    width: 50%;
+    top: 100px;
+    height: 90px;
+    left: 25%;
+    position: absolute;
+    z-index: 1;
+}
+
+.cta .email {
+    border: 1px solid #C5C5C5;
+    border-radius: 3px;
+    height: 44px; /*can't we use 100%?*/
+    width: 200px;
+    padding: 0;
+    padding-left: 10px;
+}
+
+.cta .form .btn {
+    height: 44px;
+    font-size: 20px;
+    top: 0px;
+}
+
+.cta .form {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
