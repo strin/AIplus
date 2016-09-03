@@ -30,7 +30,7 @@
           <div class="form" method="post">
             <div class="form-group">
               <label for=""></label>
-              <input class="email" name="email" type="email" spellcheck="false" id="inline_input" placeholder="Email address" class="input_email input_inline small_right_margin" data-email-healing="true"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="email" name="email" type="email" spellcheck="false" id="inline_input" placeholder="Email address" class="input_email input_inline small_right_margin" data-email-healing="true" onkeydown="if(event.keyCode == 13) {signup();}"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <button type="submit" class="btn btn-primary" onclick="signup()";>Sign Up</button>
             </div>
             <div class="message">
