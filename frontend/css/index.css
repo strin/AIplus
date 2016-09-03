@@ -36,7 +36,7 @@ html, body {
 .container .aiplus-header {
     width: 80%;
     position: absolute;
-    top: 200px;
+    top: 150px;
     z-index: 3;
 }
 
@@ -49,6 +49,15 @@ html, body {
     -webkit-font-smoothing: antialiased;
     line-height: 1.6rem;
     text-shadow: 0 0 1px rgba(0,0,0,.1);
+}
+
+.container .aiplus-desc {
+    font-size: 20px;
+    width: 50%;
+    left: 25%;
+    color: white;
+    top: 100px;
+    position: absolute;
 }
 
 .aiplus-placeholder {
@@ -75,7 +84,7 @@ html, body {
     text-align: center;
     background: rgba(0,0,0,.65);
     width: 50%;
-    top: 100px;
+    top: 250px;
     height: 90px;
     left: 25%;
     position: absolute;
@@ -86,9 +95,9 @@ html, body {
     border: 1px solid #C5C5C5;
     border-radius: 3px;
     height: 44px; /*can't we use 100%?*/
-    width: 200px;
+    width: 250px;
     padding: 0;
-    padding-left: 10px;
+    padding-left: 20px;
     font-weight: 500;
     font-family: 'Open Sans',sans-serif;
 }

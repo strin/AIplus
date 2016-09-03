@@ -1,14 +1,18 @@
 function playRandomWord(prev) {
-	var words = ['Healthcare', 'Education', 'Transportation', 'Finance'].filter(function(word) {
+	var words = ['Healthcare', 'Education', 'Transportation', 'Finance',
+				 'Law', 'Government', 'Food', 'SaaS', 'Genomics', 'Travel'
+		].filter(function(word) {
 		return prev == null || word != prev;
 	});
 	var index = Math.floor(Math.random() * words.length);
+	$('.aiplus-placeholder').html("");
+	$('.aiplus-cursor').html("");
 	playWord(words[index]);
 }
 
 function playCharacter(word, index, max_index) {
 	if(index == 0) {
-		$('.aiplus-cursor').html('_');
+		$('.aiplus-cursor').html("_");
 	}else{
 		substr = word.substring(0, index)
 		$('.aiplus-placeholder').html(substr);
@@ -27,7 +31,7 @@ function playCharacter(word, index, max_index) {
 }
 
 function playWord(word) {
-	setTimeout(playCharacter.bind(this, word, 0, 40), 1000);
+	setTimeout(playCharacter.bind(this, word, 0, 30), 1000);
 }
 
 $(function() {
