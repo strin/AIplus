@@ -43,6 +43,7 @@ function signup() {
 		$('.cta .form .message').html('Thanks! Welcome to AI+.');
 		$('.cta .form .message').css('transition', 'opacity 500ms');
 		$('.cta .form .message').css('opacity', 1);
+		$('.form .email').val('');
 	});
 }
 $(function() {
