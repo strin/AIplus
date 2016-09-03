@@ -1,5 +1,5 @@
 function playRandomWord(prev) {
-	var words = ['Healthcare', 'Education'].filter(function(word) {
+	var words = ['Healthcare', 'Education', 'Transportation', 'Finance'].filter(function(word) {
 		return prev == null || word != prev;
 	});
 	var index = Math.floor(Math.random() * words.length);
@@ -27,7 +27,7 @@ function playCharacter(word, index, max_index) {
 }
 
 function playWord(word) {
-	setTimeout(playCharacter.bind(this, word, 0), 0, 40);
+	setTimeout(playCharacter.bind(this, word, 0, 40), 1000);
 }
 
 $(function() {

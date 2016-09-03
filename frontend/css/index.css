@@ -1,20 +1,46 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    min-height: 800px;
+    position: absolute;
+    margin: 0;
+    background-image: url('/img/background.jpg')
+}
+
+.gradient {
+    background: linear-gradient(to bottom,rgba(0,0,0,0) 0,#000 67%);
+    height: 666px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+}
+
 .container {
     width: 80%;
+    height: 100%;
     margin-left: auto;
-    margin-right: auto;
-
+    margin-right: auto;    
+    background-image: cover;
 }
 
 .container .aiplus-title {
+    color: #fff;
     width: 80%;
     position: absolute;
     top: 200px;
     text-align: center;
-    font-size: 30px;    
+    font-size: 80px;
+    font-weight: 900;
+    font-family: 'Open Sans',sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6rem;
+    text-shadow: 0 0 1px rgba(0,0,0,.1);
 }
 
 .aiplus-placeholder {
     display: inline-block !important;
+    font-weight: 500;
 }
 
 .aiplus-cursor {
