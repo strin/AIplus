@@ -1,0 +1,32 @@
+.container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.container .aiplus-title {
+    width: 80%;
+    position: absolute;
+    top: 200px;
+    text-align: center;
+    font-size: 30px;    
+}
+
+.aiplus-placeholder {
+    display: inline-block !important;
+}
+
+.aiplus-cursor {
+    display: inline-block;    
+}
+
+.aiplus-cursor.on {
+    opacity: 1.0;
+    transition: opacity 500ms;
+}
+
+.aiplus-cursor {
+    opacity: 0.0;
+    transition: opacity 500ms;
+}
