@@ -1,9 +1,12 @@
+from __future__ import print_function
 from tornado import (ioloop, web)
 import hashlib
 import base64
 import random
 import string
 import os, sys
+import shelve
+from urlparse import parse_qsl, urlparse
 
 
 class MainHandler(web.RequestHandler):
@@ -11,14 +14,28 @@ class MainHandler(web.RequestHandler):
         self.render('index.html')
 
 
+class SignupHandler(web.RequestHandler):
+    def post(self):
+        data = dict(parse_qsl(self.request.body))
+        email = data['email']
+        db = shelve.open('signup')
+        db[email] = {}
+        db.close()
+
+        print('[signup]', email)
+
+        self.write({
+            'response': 'OK'
+        })
+
 handlers = [
     (r"/css/(.*)", web.StaticFileHandler, {"path": "frontend/css/"}),
     (r"/js/(.*)", web.StaticFileHandler, {"path": "frontend/js/"}),
     (r"/html/(.*)", web.StaticFileHandler, {"path": "frontend/template/"}),
     (r"/img/(.*)", web.StaticFileHandler, {"path": "frontend/img/"}),
     (r"/", MainHandler),
+    (r"/signup", SignupHandler),
 ]
-
 
 settings = {
     "autoreload": True,

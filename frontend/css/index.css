@@ -58,6 +58,7 @@ html, body {
     color: white;
     top: 100px;
     position: absolute;
+    font-weight: 300;
 }
 
 .aiplus-placeholder {
@@ -86,13 +87,15 @@ html, body {
     width: 50%;
     top: 250px;
     height: 90px;
+    transition: height 500ms;
     left: 25%;
     position: absolute;
     z-index: 1;
+    border-radius: 3px;
 }
 
 .cta .email {
-    border: 1px solid #C5C5C5;
+    border: none;
     border-radius: 3px;
     height: 44px; /*can't we use 100%?*/
     width: 250px;
@@ -106,11 +109,21 @@ html, body {
     height: 44px;
     font-size: 20px;
     top: 0px;
+    border: none;
 }
 
 .cta .form {
     padding-top: 20px;
     padding-bottom: 10px;
     font-size: 20px;
+    font-weight: 300;
 }
 
+.cta .form .message {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    display: block;
+    opacity: 0;
+    transition: opacity 500ms;
+}

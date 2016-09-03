@@ -34,6 +34,17 @@ function playWord(word) {
 	setTimeout(playCharacter.bind(this, word, 0, 30), 1000);
 }
 
+function signup() {
+	var email = $('.form .email').val();
+	$.post('/signup', {
+		'email': email
+	}, function(resp) {
+		$('.cta').css('height', '120px');
+		$('.cta .form .message').html('Thanks! Welcome to AI+.');
+		$('.cta .form .message').css('transition', 'opacity 500ms');
+		$('.cta .form .message').css('opacity', 1);
+	});
+}
 $(function() {
 	playRandomWord();
 });
