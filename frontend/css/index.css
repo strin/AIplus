@@ -38,6 +38,7 @@ html, body {
     position: absolute;
     top: 150px;
     z-index: 3;
+    left: 10%;
 }
 
 .container .aiplus-title {
